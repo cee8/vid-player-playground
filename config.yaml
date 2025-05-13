@@ -1,0 +1,17 @@
+# Markov network settings
+states:
+  - 500    # kbps
+  - 1000   # kbps
+  - 2000   # kbps
+# transition matrix (3×3)
+P:
+  - [0.7, 0.2, 0.1]
+  - [0.1, 0.8, 0.1]
+  - [0.1, 0.3, 0.6]
+
+# Simulation parameters
+defaults:
+  num_steps: 150             # number of segments per run
+  segment_lengths: [2.0, 4.0, 6.0]
+  smooth_windows:  [1, 3, 5, 7]
+  runs:            100       # Monte Carlo trials per combo
